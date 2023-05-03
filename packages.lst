@@ -1,0 +1,20 @@
+# list of packages to be installed on the system by apt
+# no need to run from here, it is handled by FAI during install
+
+cifs-utils 
+curl
+gddrescue 
+git 
+links 
+mc 
+md5deep 
+nfs-common 
+p7zip 
+par2 
+parchive 
+partclone 
+partimage 
+screen 
+smartmontools 
+tmux 
+unzip 
