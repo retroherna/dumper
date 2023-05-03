@@ -3,13 +3,13 @@
 # Bootstrap script to be called separately or uploaded to FAI
 TMPDIR="/tmp/dumper"
 DESTDIR="/opt/dumper"
-REPO_URL="https://github.com/retroherna/dumper/archive/refs/heads/main.zip"
+REPO_URL="https://github.com/retroherna/dumper/archive/refs/heads/main.tar.gz"
 
-mkdir -pv $TMPDIR
+mkdir -pv $TMPDIR $DESTDIR
 
-wget -O$TMPDIR/repo.zip $REPO_URL
+wget -O$TMPDIR/repo.tgz --unlink $REPO_URL
 
-unzip $TMPDIR/repo.zip -d $DESTDIR
+tar xvf $TMPDIR/repo.tgz --strip-components=1 --directory=$DESTDIR
 
 chmod +x $DESTDIR/scripts/init.sh
 
